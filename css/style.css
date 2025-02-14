@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Meddon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lexend+Zetta:wght@800&family=Meddon&display=swap');
+
 
 /* General Styles */
 body {
@@ -15,8 +16,8 @@ html {
 }
 
 .main-title {
-    font-family: 'Inter', sans-serif !important;
-    font-weight: 700 !important;
+    font-family: 'Lexend Zetta', sans-serif !important;
+    font-weight: 800 !important;
     font-size: 4rem !important;
     color: #5D76A9 !important;
     text-transform: uppercase;
