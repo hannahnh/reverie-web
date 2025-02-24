@@ -56,7 +56,7 @@ html {
     text-decoration: underline;
 }
 
-/* Sections */
+/* Features Page Content */
 .section {
     height: 100vh;
     display: flex;
@@ -66,87 +66,17 @@ html {
     text-align: center;
 }
 
-/* Swiper Styles */
-.swiper-container {
-    width: 100%;
-    max-width: 60vw;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    padding-bottom: 170px; 
-}
-
-.swiper-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.swiper-slide {
-    width: 150px;
-    height: 450px;
-    background: white;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: black;
-    border: 2px solid #5D76A9;
-}
-
-.swiper-slide:not(.swiper-slide-active) {
-    transform: scale(0.85);
-    opacity: 0.3;
-}
-
-/* Pagination Fix */
-.swiper-pagination {
-    position: absolute !important;
-    bottom: 130px !important; /* Adjust to move it up */
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 10;
-}
-
-.swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #5D76A9;
-    opacity: 1;
-}
-
-/* Title Fix */
-.main-title {
-    font-family: 'Lexend Zetta', sans-serif;
+h2 {
+    font-size: 3rem;
     font-weight: 800;
-    font-size: 4rem;
     color: #5D76A9;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    position: absolute;
-    bottom: 60px; 
-    left: 50%;
-    transform: translateX(-50%);
 }
 
-/* Scroll for More Fix */
-.sub-text {
-    font-family: 'Meddon', cursive;
-    font-size: 1.1rem;
+p {
+    font-size: 1.2rem;
     color: #5D76A9;
-    text-align: center;
-    position: absolute;
-    bottom: 15px; 
-    left: 50%;
-    transform: translateX(-50%);
+    max-width: 600px;
+    line-height: 1.5;
 }
 
 /* Button */
