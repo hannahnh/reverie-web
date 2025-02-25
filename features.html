@@ -7,24 +7,99 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/features.css">
 </head>
-<body>
+<body class="bg-[#D6DCE1] text-gray-900">
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <h1>GROUP 4</h1>
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="features.html" class="active">features</a></li>
-        </ul>
+    <nav class="navbar flex justify-between px-10 py-6 bg-[#D6DCE1] fixed top-0 w-full z-50 shadow-none border-none">
+      <!-- Home Icon -->
+      <div class="flex lg:flex-1">
+        <a href="index.html" class="-m-1.5 p-1.5">
+          <span class="sr-only">Reverie</span>
+          <img class="h-11 w-auto" src="assets/robot.png" alt="Reverie Logo">
+        </a>
+      </div>
+  
+      <!-- Mobile Menu Button -->
+      <div class="flex lg:hidden">
+        <button type="button" id="mobile-menu-btn" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex lg:gap-x-12">
+        <!-- About Dropdown -->
+        <div class="relative">
+            <button id="about-button" type="button" class="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
+              About
+              <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div id="about-dropdown" class="absolute hidden top-full left-0 mt-3 w-48 rounded-md bg-[#D6DCE1] shadow-lg ring-1 ring-gray-900/5">
+                <a href="about.html" class="block px-4 py-2 text-black hover:bg-[#B8C5E1] rounded-md">Research</a>
+                <a href="team.html" class="block px-4 py-2 text-black hover:bg-[#B8C5E1] rounded-md">About the Team</a>
+              </div>
+              
+        </div>
+  
+        <!-- Product Page (Previously Features) -->
+        <a href="features.html" class="text-lg font-semibold text-gray-900 hover:text-gray-700">Product</a>
+      </div>
     </nav>
 
-    <!-- Features Page Content -->
-    <section class="section">
-        <h2>App Features</h2>
-        <p>Explore the unique features of the Reverie chatbot.</p>
-        <button class="button">View Demo</button>
-    </section>
+    <!-- Features Section -->
+    <div class="py-24 sm:py-32">
+      <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <h2 class="text-center text-base font-semibold text-[#5D76A9]">Explore Our Features</h2>
+        <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
+          Everything you need to know about our app features
+        </p>
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+      
+            <!-- Feature 1 -->
+            <div class="relative flex flex-col bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg">
+              <h3 class="text-lg font-semibold text-gray-900">Mobile Friendly</h3>
+              <p class="text-gray-600 mt-1 text-sm">Optimized for all devices to ensure seamless access.</p>
+              <div class="pt-3">
+                <img class="w-full aspect-[4/3] rounded-lg object-contain" src="https://tailwindui.com/plus-assets/img/component-images/bento-03-mobile-friendly.png" alt="Mobile Friendly">
+              </div>
+            </div>
+      
+            <!-- Feature 2 -->
+            <div class="relative flex flex-col bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg">
+              <h3 class="text-lg font-semibold text-gray-900">Performance</h3>
+              <p class="text-gray-600 mt-1 text-sm">Optimized speeds for the best user experience.</p>
+              <div class="pt-3">
+                <img class="w-full aspect-[4/3] rounded-lg object-contain" src="https://tailwindui.com/plus-assets/img/component-images/bento-03-performance.png" alt="Performance">
+              </div>
+            </div>
+      
+            <!-- Feature 3 -->
+            <div class="relative flex flex-col bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg">
+              <h3 class="text-lg font-semibold text-gray-900">Security</h3>
+              <p class="text-gray-600 mt-1 text-sm">Your data is protected with the highest security measures.</p>
+              <div class="pt-3">
+                <img class="w-full aspect-[4/3] rounded-lg object-contain" src="https://tailwindui.com/plus-assets/img/component-images/bento-03-security.png" alt="Security">
+              </div>
+            </div>
+      
+            <!-- Feature 4 -->
+            <div class="relative flex flex-col bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg">
+              <h3 class="text-lg font-semibold text-gray-900">Powerful APIs</h3>
+              <p class="text-gray-600 mt-1 text-sm">Easily integrate with your existing applications.</p>
+              <div class="pt-3">
+                <img class="w-full aspect-[4/3] rounded-lg object-contain" src="https://tailwindui.com/plus-assets/img/component-images/bento-03-security.png" alt="Powerful APIs">
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
 
+      <script src="js/script.js"></script>
 </body>
 </html>

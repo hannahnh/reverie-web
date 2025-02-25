@@ -1,4 +1,3 @@
-/* index.html */
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,103 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reverie</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <a href="https://www.flaticon.com/free-icons/robot" title="robot icons">Robot icons created by Hilmy Abiyyu A. - Flaticon</a>
 </head>
-<body>
+<body class="bg-[#D6DCE1]">
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1>GROUP 4</h1>
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="features.html">features</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Landing Page -->
-    <section id="home" class="section">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><span>1</span></div>
-                <div class="swiper-slide"><span>2</span></div>
-                <div class="swiper-slide"><span>3</span></div>
-                <div class="swiper-slide"><span>4</span></div>
-                <div class="swiper-slide"><span>5</span></div>
-                <div class="swiper-slide"><span>6</span></div>
+    <header class="bg-[#D6DCE1] fixed top-0 w-full z-50 shadow-md">
+        <nav class="navbar flex justify-between px-10 py-6 bg-[#D6DCE1] fixed top-0 w-full z-50 shadow-none border-none">
+          <!-- Home Icon -->
+          <div class="flex lg:flex-1">
+            <a href="index.html" class="-m-1.5 p-1.5">
+              <span class="sr-only">Reverie</span>
+              <img class="h-11 w-auto" src="assets/robot.png" alt="Reverie Logo">
+            </a>
+          </div>
+      
+          <!-- Mobile Menu Button -->
+          <div class="flex lg:hidden">
+            <button type="button" id="mobile-menu-btn" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Open menu</span>
+              <svg class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+      
+          <!-- Desktop Menu -->
+          <div class="hidden lg:flex lg:gap-x-12">
+            <!-- About Dropdown -->
+            <div class="relative">
+                <button id="about-button" type="button" class="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
+                  About
+                  <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div id="about-dropdown" class="absolute hidden top-full left-0 mt-3 w-48 rounded-md bg-[#D6DCE1] shadow-lg ring-1 ring-gray-900/5">
+                    <a href="about.html" class="block px-4 py-2 text-black hover:bg-[#B8C5E1] rounded-md">Research</a>
+                    <a href="team.html" class="block px-4 py-2 text-black hover:bg-[#B8C5E1] rounded-md">About the Team</a>
+                  </div>
+                  
             </div>
-            <div class="swiper-pagination"></div>
+      
+            <!-- Product Page (Previously Features) -->
+            <a href="features.html" class="text-lg font-semibold text-gray-900 hover:text-gray-700">Product</a>
+          </div>
+        </nav>
+      
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <button id="close-menu" class="absolute top-4 right-4 text-gray-700">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div class="mt-6 space-y-4">
+            <a href="index.html" class="block text-lg font-semibold text-gray-900">Home</a>
+            <button id="mobile-about-btn" class="w-full text-left text-lg font-semibold text-gray-900 flex justify-between">
+              About
+              <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div id="mobile-about-menu" class="hidden space-y-2 pl-4">
+              <a href="about.html" class="block text-gray-700">Research</a>
+              <a href="team.html" class="block text-gray-700">About the Team</a>
+            </div>
+            <a href="features.html" class="block text-lg font-semibold text-gray-900">Product</a>
+          </div>
         </div>
-        <h1 class="main-title">REVERIE</h1>
-        <p class="sub-text">scroll for more</p>
-    </section>
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      </header>
+         
+
+    <!-- Hero Section -->
+    <div class="relative isolate overflow-hidden bg-[#D6DCE1] px-6 py-28 sm:py-36 lg:overflow-visible lg:px-0">
+
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <svg class="absolute top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#grid-pattern)" />
+            </svg>
+        </div>
+        
+        <!-- Content Section -->
+        <div class="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:items-center">
+            <!-- Text Section -->
+            <div class="lg:pr-4 lg:mt-1">  
+                <p class="text-base font-semibold text-black">Welcome to</p>
+                <h1 class="mt-2 text-6xl font-extrabold tracking-widest text-[#5D76A9] uppercase sm:text-7xl">REVERIE</h1>
+                <p class="mt-6 text-lg text-black leading-relaxed">
+                    A place where technology and emotions merge. Our AI-driven chatbot enables people to reconnect with loved ones in a meaningful way, offering comfort and support through simulated conversations.
+                </p>
+            </div>
+
+            <!-- Image Section -->
+            <div class="relative lg:-mt-4">  
+                <img class="w-[48rem] max-w-none rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem]" src="https://tailwindui.com/plus-assets/img/component-images/dark-project-app-screenshot.png" alt="Mockup">
+            </div>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Reverie</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1>GROUP 4</h1>
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="features.html">features</a></li>
-        </ul>
-    </nav>
-    
-    <!-- About Page Content -->
-    <section class="section">
-        <h2>about, features</h2>
-        <p>some details about the ai grief chatbot features</p>
-    </section>
-    
-</body>
-</html>
-
-
-/* features.html */
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverie Features</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1>GROUP 4</h1>
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="features.html">features</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Features Page Content -->
-    <section class="section">
-        <h2>App Features</h2>
-        <p>Explore the unique features of the Reverie chatbot.</p>
-        <button class="button">View Demo</button>
-    </section>
-    
 </body>
 </html>
