@@ -10,48 +10,62 @@
 <body class="bg-[#D6DCE1]">
 
     <!-- Navbar -->
-    <header class="bg-[#D6DCE1] fixed top-0 w-full z-50 shadow-md">
-        <nav class="navbar flex justify-between px-10 py-6 bg-[#D6DCE1] fixed top-0 w-full z-50 shadow-none border-none">
-            <!-- Home Icon -->
-            <div class="flex lg:flex-1">
-              <a href="index.html" class="-m-1.5 p-1.5">
-                <span class="sr-only">Reverie</span>
-                <img class="h-11 w-auto" src="assets/robot.png" alt="Reverie Logo">
-              </a>
-            </div>
-        
-            <!-- Mobile Menu Button -->
-            <div class="flex lg:hidden">
-              <button type="button" id="mobile-menu-btn" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Open menu</span>
-                <svg class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    <header class="bg-[#D6DCE1] fixed top-0 w-full z-50">
+        <nav class="navbar flex justify-between items-center px-6 py-4 bg-[#D6DCE1] w-full">
+          <!-- Logo -->
+          <a href="index.html">
+            <img class="h-11 w-auto" src="assets/robot.png" alt="Reverie Logo">
+          </a>
+      
+          <!-- Mobile Menu Button -->
+          <button type="button" id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-700">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+      
+          <!-- Desktop Menu -->
+          <div class="hidden lg:flex lg:gap-x-12">
+            <div class="relative">
+              <button id="about-btn" class="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
+                About
+                <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                 </svg>
               </button>
-            </div>
-        
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex lg:gap-x-12">
-              <!-- About Dropdown -->
-              <div class="relative">
-                  <button id="about-button" type="button" class="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
-                    About
-                    <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                    </svg>
-                  </button>
-                  <div id="about-dropdown" class="absolute hidden top-full left-0 mt-3 w-48 rounded-md bg-[#D6DCE1] shadow-lg ring-1 ring-gray-900/5">
-                      <a href="about.html" class="block px-4 py-2 text-black hover:bg-[#B8C5E1] rounded-md">Research</a>
-                      <a href="team.html" class="block px-4 py-2 text-black hover:bg-[#B8C5E1] rounded-md">About the Team</a>
-                    </div>
-                    
+              <!-- Dropdown -->
+              <div id="about-dropdown" class="absolute hidden mt-2 w-48 bg-[#D6DCE1] rounded-md shadow-lg ring-1 ring-gray-300">
+                <a href="about.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Research</a>
+                <a href="team.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">About the Team</a>
               </div>
-        
-              <!-- Product Page (Previously Features) -->
-              <a href="features.html" class="text-lg font-semibold text-gray-900 hover:text-gray-700">Product</a>
             </div>
-          </nav>
-    </header>
+            <a href="features.html" class="text-lg font-semibold text-gray-900 hover:text-gray-700">Product</a>
+          </div>
+        </nav>
+      
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-[#D6DCE1] z-40 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-300">
+          <button id="close-menu" class="absolute top-4 right-4 text-gray-700">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div class="mt-6 space-y-4">
+            <a href="index.html" class="block text-lg font-semibold text-gray-900">Home</a>
+            <button id="mobile-about-btn" class="w-full text-left text-lg font-semibold text-gray-900 flex justify-between">
+              About
+              <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div id="mobile-about-menu" class="hidden space-y-2 pl-4">
+              <a href="about.html" class="block text-gray-700">Research</a>
+              <a href="team.html" class="block text-gray-700">About the Team</a>
+            </div>
+            <a href="features.html" class="block text-lg font-semibold text-gray-900">Product</a>
+          </div>
+        </div>
+      </header>
 
     <!-- About Section -->
     <div class="bg-[#D6DCE1] py-32 sm:py-40 -mt-8">
