@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sendButton = document.getElementById("send-button");
     const micButton = document.getElementById("mic-button");
     const micStatus = document.createElement("p"); // Mic status message
-    micStatus.className = "text-gray-500 text-sm mt-2 text-center";
+    micStatus.className = "text-gray-500 text-sm mt-2 text-center font-mono";
     micButton.parentElement.appendChild(micStatus);
 
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function appendMessage(sender, message) {
         const messageElement = document.createElement("div");
-        messageElement.className = `p-2 my-1 rounded-md ${sender === "user" ? "bg-[#C5BCCE] text-black self-end text-right" : "bg-[#6F5588] text-white self-start text-left"}`;
+        messageElement.className = `p-2 my-1 rounded-md ${sender === "user" ? "bg-[#C5BCCE] text-black self-end text-right font-mono" : "bg-[#6F5588] text-white self-start text-left font-mono"}`;
         messageElement.textContent = message;
         chatbox.appendChild(messageElement);
         chatbox.scrollTop = chatbox.scrollHeight;
@@ -79,12 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     recognition.onstart = function () {
         micButton.classList.add("mic-active");
-        micButton.style.backgroundColor = "#5D76A9"; 
+        micButton.style.backgroundColor = "#6F5588"; 
     };
 
     recognition.onend = function () {
         micButton.classList.remove("mic-active");
-        micButton.style.backgroundColor = "#D6DCE1"; 
+        micButton.style.backgroundColor = "#C5BCCE"; 
     };
 
     recognition.onresult = function (event) {
