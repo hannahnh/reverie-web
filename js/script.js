@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function chatbotResponse(userMessage) {
         try {
-            const response = await fetch("https://reverie-gilil8vne-hannahs-projects-30b1845c.vercel.app/api/chatbot", {
+            const response = await fetch("https://reverie-hg2sfjolj-hannahs-projects-30b1845c.vercel.app/api/chatbot", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message: userMessage })
